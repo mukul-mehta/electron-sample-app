@@ -1,6 +1,6 @@
 {
   "name": "electron-sample-app",
-  "version": "0.0.95",
+  "version": "1.0.1",
   "description": "A minimal Electron application",
   "main": "src/main.js",
   "scripts": {
@@ -53,9 +53,10 @@
           ]
         }
       ],
-      "publish": [
-        "github"
-      ]
+      "publish": {
+        "provider": "generic",
+        "url": "http://localhost:5000"
+      }
     },
     "files": [
       "src/**/*",

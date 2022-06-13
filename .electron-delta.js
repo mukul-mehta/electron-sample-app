@@ -7,7 +7,14 @@ const getPreviousReleases = require("./build_scripts/get-previous-releases");
 const options = {
   productIconPath: path.join(__dirname, "icon.ico"),
   productName: "electron-sample-app",
-  getPreviousReleases,
+  getPreviousReleases: () => {
+    return [
+      {
+        version: "1.0.0",
+        url: "http://localhost:5000/electron-sample-app-1.0.0.exe",
+      }
+    ]
+  },
   sign: async (filePath) => {
     // sign each delta executable
     return filePath;
